@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Custom Websites for Service Businesses — JRZ Consulting Solutions</title>
+<meta name="description" content="Your website, written for you, live by a set date, and 100% yours. Custom websites built on real customer research — website + Marketing Vault for $2,500 founding-client pricing."/>
+<meta property="og:title" content="Your website, written for you, live by a set date, and 100% yours."/>
+<meta property="og:description" content="Custom websites for service businesses, built on real customer research. Free homepage mockup — no strings."/>
+<meta name="theme-color" content="#07070a"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307070a'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='26' font-weight='700' fill='%23d3a97c' text-anchor='middle'%3EJRZ%3C/text%3E%3C/svg%3E"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="jrz.css"/>
+<link rel="stylesheet" href="web.css"/>
+
+<!-- ═══════════ SETTINGS: fill these in, nothing else needs editing ═══════════ -->
+<script>
+  window.JRZ = {
+    FORMSPREE_ID: '',      // e.g. 'xyzabcd' from formspree.io → your form's endpoint https://formspree.io/f/xyzabcd
+    BOOKING_URL: '',       // e.g. 'https://cal.com/jrz/20min' — leave empty to use WhatsApp for booking
+    META_PIXEL_ID: '',     // e.g. '123456789012345' from Meta Events Manager
+    GA4_ID: '',            // e.g. 'G-XXXXXXXXXX' from Google Analytics
+    WHATSAPP: '16822037801'
+  };
+  (function (c) {
+    if (c.META_PIXEL_ID) {
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', c.META_PIXEL_ID); fbq('track', 'PageView');
+    }
+    if (c.GA4_ID) {
+      var g = document.createElement('script'); g.async = true; g.src = 'https://www.googletagmanager.com/gtag/js?id=' + c.GA4_ID; document.head.appendChild(g);
+      window.dataLayer = window.dataLayer || []; window.gtag = function () { dataLayer.push(arguments); };
+      gtag('js', new Date()); gtag('config', c.GA4_ID);
+    }
+  })(window.JRZ);
+</script>
+</head>
+<body>
+
+<canvas id="stage" aria-hidden="true"></canvas>
+<div class="atmos" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"><span></span></div>
+
+<!-- ═══════════ NAV ═══════════ -->
+<header class="nav">
+  <a class="brand" href="#top" aria-label="JRZ Consulting Solutions — home">
+    <span class="brand-mono">JRZ</span>
+    <span class="brand-name">Consulting<br>Solutions</span>
+  </a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="#work">Work</a>
+    <a href="#how">How It Works</a>
+    <a href="#offer">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <a href="services.html">All Services</a>
+    <a class="pill magnetic" href="#mockup">Free Mockup</a>
+  </nav>
+  <button class="menu-btn" data-menu aria-expanded="false" aria-controls="mmenu">Menu</button>
+</header>
+<div class="mobile-menu" id="mmenu">
+  <button class="menu-btn close" data-menu aria-expanded="false">Close</button>
+  <a href="#work"><small>01</small>Work</a>
+  <a href="#how"><small>02</small>How It Works</a>
+  <a href="#offer"><small>03</small>Pricing</a>
+  <a href="#faq"><small>04</small>FAQ</a>
+  <a href="#mockup"><small>→</small>Free Mockup</a>
+  <a href="services.html"><small>+</small>All Services</a>
+</div>
+
+<a class="float-cta" href="#mockup" aria-label="Get your free homepage mockup">
+  <svg viewBox="0 0 24 24"><path d="M4 5h16v11H4zM8 20h8M12 16v4"/></svg>
+  <span>Free Mockup</span>
+</a>
+
+<main id="top">
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero" data-shape="hero" data-side="right">
+  <div class="wrap">
+    <span class="label fade">Custom websites for service businesses</span>
+    <h1 data-split style="max-width:15ch; font-size:clamp(44px, 7.4vw, 116px);">Your website, <em>written for you.</em></h1>
+    <p class="hero-sub fade" style="--d:.5s; max-width:36ch;">Live by a date in your contract, and 100% yours from day one. Built on real research into your customers, so it brings in calls, not just compliments.</p>
+    <div class="hero-ctas fade" style="--d:.7s">
+      <a class="pill magnetic" href="#mockup">Get a Free Homepage Mockup
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="pill ghost magnetic" href="#offer">See the $2,500 Offer</a>
+    </div>
+    <div class="trust-row fade" style="--d:.9s">
+      <span>Fixed price</span><span>Live within 30 days</span><span>You own everything</span><span>Replies in 1 business day</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PAIN ═══════════ -->
+<section class="section" id="pain" data-shape="web" data-side="center">
+  <div class="wrap">
+    <div class="center-head">
+      <span class="label fade">Sound familiar?</span>
+      <h2 data-split>Most website projects fail <em>before design.</em></h2>
+      <p class="fade">These are the complaints owners make about web builders over and over. Every one of them is about trust, not design. So that's what we fixed first.</p>
+    </div>
+    <div class="pain-grid">
+      <div class="panel pain fade"><span class="tag">They vanish</span><div class="q">"My web guy stopped answering."</div><p>Half-built site, deposit gone, and no way to reach the person who has your logins.</p></div>
+      <div class="panel pain fade" style="--d:.08s"><span class="tag">It drags on</span><div class="q">"It was supposed to take a month."</div><p>Six months later it's still "almost done," and every change pushes it back again.</p></div>
+      <div class="panel pain fade" style="--d:.16s"><span class="tag">You don't own it</span><div class="q">"They registered my domain in their name."</div><p>Your web address, hosting and logins are held by someone else, and getting them back costs extra.</p></div>
+      <div class="panel pain fade" style="--d:.24s"><span class="tag">Homework</span><div class="q">"They asked me to write all the content."</div><p>You hired a pro, then got sent a blank document. The site ends up generic because nobody did the research.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PROMISE ═══════════ -->
+<section class="section" id="promise" data-shape="vault" data-side="left">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="label fade">The JRZ Promise</span>
+        <h2 data-split>Four commitments, <em>in writing.</em></h2>
+      </div>
+      <p class="fade">Each one answers a problem above, and each one goes in your contract.</p>
+    </div>
+    <div class="promise-grid">
+      <div class="panel promise fade"><span class="n">01</span><div><h3>We write it.</h3><p>You talk for 45 minutes. We research your customers and competitors, then write every word on the site. No blank pages, no homework.</p><span class="fixes">Fixes: generic sites + content homework</span></div></div>
+      <div class="panel promise fade" style="--d:.08s"><span class="n">02</span><div><h3>Live within 30 days, in writing.</h3><p>Your launch date goes in the contract, always within 30 days of kickoff. If we miss it for reasons on our side, you get 3 months of site care free.</p><span class="fixes">Fixes: projects that drag on</span></div></div>
+      <div class="panel promise fade" style="--d:.16s"><span class="n">03</span><div><h3>You own everything.</h3><p>Domain, hosting and every login are in your name from day one. If we ever part ways, you keep it all.</p><span class="fixes">Fixes: sites held hostage</span></div></div>
+      <div class="panel promise fade" style="--d:.24s"><span class="n">04</span><div><h3>One business day, every time.</h3><p>Every message gets a reply within one business day, and you get a written update every Friday until launch, whether you ask or not.</p><span class="fixes">Fixes: builders who disappear</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ WORK ═══════════ -->
+<section class="section" id="work" data-shape="web" data-side="right">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="label fade">Recent Work</span>
+        <h2 data-split>Built from research, <em>built to convert.</em></h2>
+      </div>
+      <p class="fade">Every JRZ site starts with who the customer is and what they need to hear, then the design follows.</p>
+    </div>
+    <div class="work-grid">
+      <a class="panel work fade" href="https://captureeverycall.co/" target="_blank" rel="noopener" data-cursor="Visit">
+        <div class="shot"><i></i><b>CaptureEveryCall</b></div>
+        <div class="body"><span>Trades · AI call agent</span><p>A conversion funnel for home service businesses: pain-first headline, a live cost calculator, and a demo line visitors can call.</p><em>View live site →</em></div>
+      </a>
+      <a class="panel work fade" href="https://zuba213213.github.io/Mithu.Surendra/" target="_blank" rel="noopener" data-cursor="Visit" style="--d:.08s">
+        <div class="shot"><i></i><b>Mithu Surendra</b></div>
+        <div class="body"><span>Coach · speaker</span><p>A personal-brand site built on a full Marketing Vault, with the story, method and proof written in the client's own voice.</p><em>View preview →</em></div>
+      </a>
+      <a class="panel work next fade" href="#mockup" style="--d:.16s">
+        <div class="shot"><b>Your business</b></div>
+        <div class="body"><span>Next up</span><p>Send us your current site (or just your business name) and we'll design your new homepage for free, before you spend a dollar.</p><em>Get your free mockup →</em></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ HOW ═══════════ -->
+<section class="section" id="how" data-shape="system" data-side="center">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="label fade">How It Works</span>
+        <h2 data-split>See it first. <em>Pay as it's built.</em></h2>
+      </div>
+      <p class="fade">You see your new homepage before you commit, and you pay in three parts tied to progress you can see.</p>
+    </div>
+    <ol class="steps">
+      <li class="fade"><span class="n">01</span><h3>Free mockup</h3><p>Tell us about your business. We design your new homepage, free.</p></li>
+      <li class="fade" style="--d:.08s"><span class="n">02</span><h3>20-minute call</h3><p>We walk through the mockup and agree scope, price and launch date.</p><span class="pay">40% to start</span></li>
+      <li class="fade" style="--d:.16s"><span class="n">03</span><h3>You talk, we write</h3><p>A 45-minute interview becomes your Marketing Vault and every word on your site. First drafts within days.</p></li>
+      <li class="fade" style="--d:.24s"><span class="n">04</span><h3>Review &amp; approval</h3><p>In week one we review the drafts together and make your changes.</p><span class="pay">30% on draft approval</span></li>
+      <li class="fade" style="--d:.32s"><span class="n">05</span><h3>Launch &amp; keys</h3><p>Site goes live on the agreed date. Every login handed over, plus a video walkthrough.</p><span class="pay">30% at launch</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ═══════════ OFFER ═══════════ -->
+<section class="section" id="offer" data-shape="vault" data-side="center">
+  <div class="wrap">
+    <div class="center-head">
+      <span class="label fade">The Offer</span>
+      <h2 data-split>A full website <em>and</em> the research behind it.</h2>
+      <p class="fade">Founding-client pricing while we build our portfolio of service-business sites.</p>
+    </div>
+    <div class="panel offer fade">
+      <div class="offer-main">
+        <span class="badge-inline">Founding-client price</span>
+        <h3>Website + Marketing Vault</h3>
+        <p class="sub">The research that makes the site convert, and the site built from it.</p>
+        <div class="cols">
+          <div>
+            <div class="panel-title">The website</div>
+            <ul class="inc">
+              <li><span>Up to 6 custom pages<small>No templates, mobile-first</small></span></li>
+              <li><span>Every word written for you<small>From your customer research</small></span></li>
+              <li><span>Lead capture + booking<small>Forms wired to your inbox or CRM</small></span></li>
+              <li><span>Tracking set up<small>Analytics + ad pixel ready</small></span></li>
+              <li><span>SEO-ready structure<small>Fast, clean, Google-friendly</small></span></li>
+              <li><span>2 rounds of revisions<small>Before anything goes live</small></span></li>
+            </ul>
+          </div>
+          <div>
+            <div class="panel-title">The Marketing Vault</div>
+            <ul class="inc">
+              <li><span>Brand Consistency Document<small>Voice, visuals, rules</small></span></li>
+              <li><span>Ideal Client Profile<small>Who buys and why</small></span></li>
+              <li><span>Copy Framework<small>One voice everywhere</small></span></li>
+              <li><span>8–12 ready-to-send emails<small>Follow-up that runs itself</small></span></li>
+              <li><span>90-Day Growth Roadmap<small>What to do next, with the math</small></span></li>
+            </ul>
+            <p class="mini-note"><a href="vault.html" style="color:var(--gold-hi)">See the full Vault breakdown →</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="offer-side">
+        <div class="price-label">Your investment</div>
+        <div class="big-price">$2,500</div>
+        <div class="was">Website <s>$3,500</s> + Vault <s>$2,500</s> = <s>$6,000</s></div>
+        <ul class="paysched">
+          <li><span>To start</span><b>$1,000</b></li>
+          <li><span>On approval of first drafts</span><b>$750</b></li>
+          <li><span>At launch</span><b>$750</b></li>
+        </ul>
+        <div class="guarantee"><strong>Launch-date guarantee:</strong> live within 30 days of kickoff, with the date in your contract. If we miss it for reasons on our side, you get 3 months of site care free.</div>
+        <a class="pill magnetic" href="#mockup">Start With a Free Mockup</a>
+        <p class="addons">Optional after launch: site care plan, AI call agent, CRM, ads. <a href="services.html">See all services</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FAQ ═══════════ -->
+<section class="section" id="faq" data-shape="galaxy" data-side="center">
+  <div class="wrap">
+    <div class="center-head">
+      <span class="label fade">Questions</span>
+      <h2 data-split>Straight <em>answers.</em></h2>
+    </div>
+    <div class="faq fade">
+      <details><summary>Do I really own the website?</summary><p>Yes. Your domain, hosting account and every login are set up in your name from day one. We work inside accounts you own. If we ever stop working together, you keep everything and owe us nothing to get it.</p></details>
+      <details><summary>How long does it take?</summary><p>You'll usually see the first draft of your site and your Marketing Vault within a few days of our interview. We review it together in week one, make your changes, and launch within 30 days of kickoff. The date goes in your contract. If we miss the date for reasons on our side, you get 3 months of site care free.</p></details>
+      <details><summary>What do I need to provide?</summary><p>About 45 minutes for an interview, access to your existing accounts (if any), and any photos you'd like used. We write all the words. You review and approve.</p></details>
+      <details><summary>Is the free mockup really free?</summary><p>Yes. We design your new homepage so you can see the direction before deciding anything. If you don't move forward, no charge and no follow-up spam.</p></details>
+      <details><summary>Why is it $2,500 when the parts add up to $6,000?</summary><p>It's founding-client pricing. We're building our portfolio of service-business websites, and early clients get the full website and the Vault research for the price of one.</p></details>
+      <details><summary>What are the ongoing costs?</summary><p>You pay your own domain and hosting directly, usually a small yearly or monthly fee depending on the provider. An optional care plan covers updates, backups and edits after launch.</p></details>
+      <details><summary>I already have a website. Can you redo it?</summary><p>Yes. Redesigns are welcome. We'll keep what's working, move your domain over safely, and rebuild the rest around your customer research.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ LEAD FORM ═══════════ -->
+<section class="section" id="mockup" data-shape="hero" data-side="left">
+  <div class="wrap form-wrap">
+    <div class="lead-copy">
+      <span class="label fade">Free Homepage Mockup</span>
+      <h2 data-split>See your new site <em>before you spend a dollar.</em></h2>
+      <p class="fade">Tell us a little about your business. We'll design your new homepage and send it to you with a short video walkthrough within 3 business days.</p>
+      <p class="fade">No obligation. If you like it, we'll talk about a launch date. If not, it's yours to keep.</p>
+    </div>
+    <div class="panel fade" id="formPanel" style="--d:.1s">
+      <form class="lead-form" id="leadForm" novalidate>
+        <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required placeholder="First and last name"/></div>
+        <div class="field"><label for="f-biz">Business name</label><input id="f-biz" name="business" autocomplete="organization" required placeholder="e.g. Griggs Electric"/></div>
+        <div class="field"><label for="f-type">Type of business</label>
+          <select id="f-type" name="business_type" required>
+            <option value="" disabled selected>Choose one</option>
+            <option>Electrical</option><option>HVAC</option><option>Plumbing</option><option>Roofing / Contracting</option>
+            <option>Other home service</option><option>Coach / Consultant</option><option>Other local business</option>
+          </select></div>
+        <div class="field"><label for="f-site">Current website <small>(optional)</small></label><input id="f-site" name="current_site" type="url" inputmode="url" placeholder="https://"/></div>
+        <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required placeholder="you@business.com"/></div>
+        <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required placeholder="(555) 555-5555"/></div>
+        <div class="field full"><label for="f-pain">Biggest frustration with your website</label>
+          <select id="f-pain" name="frustration">
+            <option value="" disabled selected>Choose one</option>
+            <option>I don't have one</option><option>It looks outdated</option><option>It doesn't bring in calls</option>
+            <option>My last web person disappeared</option><option>I can't update it myself</option><option>Something else</option>
+          </select></div>
+        <div class="field full"><label for="f-note">Anything else? <small>(optional)</small></label><textarea id="f-note" name="notes" placeholder="Services you offer, area you serve, sites you like…"></textarea></div>
+        <div class="hp" aria-hidden="true"><label>Leave this empty<input name="_gotcha" tabindex="-1" autocomplete="off"/></label></div>
+        <p class="consent full">By sending this you agree we can contact you about your mockup by email or phone. See our <a href="privacy.html">privacy policy</a>.</p>
+        <div class="form-status full" id="formStatus" role="status" aria-live="polite"></div>
+        <button class="pill magnetic full" type="submit" id="formBtn">Send Me My Free Mockup</button>
+        <p class="form-alt full">Prefer to talk? <a href="#" data-wa="Hi Joey, I'd like a free homepage mockup for my business.">Message us on WhatsApp</a></p>
+      </form>
+      <div class="form-done" id="formDone">
+        <span class="label" style="justify-content:center">Received</span>
+        <h3>Your mockup is on the way.</h3>
+        <p>We'll email it with a short video walkthrough within 3 business days. Want to pick a time to go over it?</p>
+        <a class="pill" id="bookBtn" href="#" target="_blank" rel="noopener">Book a 20-Minute Call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 JRZ Consulting Solutions</span>
+    <div class="foot-links">
+      <a href="services.html">All Services</a>
+      <a href="vault.html">The Vault</a>
+      <a href="how-we-work.html">How We Work</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="espanol/index.html" hreflang="es">Español</a>
+    </div>
+  </div>
+</footer>
+
+<script src="jrz.js"></script>
+<script>
+(function () {
+  var C = window.JRZ, doc = document;
+  function wa(text) { return 'https://wa.me/' + C.WHATSAPP + '?text=' + encodeURIComponent(text); }
+  function track(fbEvent, gaEvent, params) {
+    try { if (window.fbq) fbq('track', fbEvent, params || {}); } catch (e) {}
+    try { if (window.gtag) gtag('event', gaEvent, params || {}); } catch (e) {}
+  }
+  // WhatsApp links
+  doc.querySelectorAll('[data-wa]').forEach(function (a) {
+    a.href = wa(a.getAttribute('data-wa')); a.target = '_blank'; a.rel = 'noopener';
+    a.addEventListener('click', function () { track('Contact', 'contact_whatsapp'); });
+  });
+  // Booking button: calendar link if set, else WhatsApp
+  var book = doc.getElementById('bookBtn');
+  if (book) {
+    book.href = C.BOOKING_URL || wa("Hi Joey, I just requested a homepage mockup. I'd like to book a 20-minute call.");
+    book.addEventListener('click', function () { track('Schedule', 'book_call_click'); });
+  }
+  // Lead form
+  var form = doc.getElementById('leadForm'), panel = doc.getElementById('formPanel'),
+      status = doc.getElementById('formStatus'), btn = doc.getElementById('formBtn');
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    status.className = 'form-status full'; status.textContent = '';
+    var missing = Array.prototype.filter.call(form.querySelectorAll('[required]'), function (el) { return !el.value.trim(); });
+    if (missing.length) { status.className += ' err'; status.textContent = 'Please fill in your name, business, type of business, email and phone.'; missing[0].focus(); return; }
+    var email = form.email.value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { status.className += ' err'; status.textContent = 'Please check your email address.'; form.email.focus(); return; }
+    if (form._gotcha.value) return; // bot
+    var data = new FormData(form);
+    function done() {
+      panel.classList.add('sent');
+      track('Lead', 'generate_lead', { content_name: 'Free homepage mockup' });
+      panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    if (!C.FORMSPREE_ID) {
+      // No form service connected yet: hand the request over through WhatsApp instead.
+      var msg = 'Hi Joey, I\'d like a free homepage mockup.\n' +
+        'Name: ' + form.name.value + '\nBusiness: ' + form.business.value + ' (' + form.business_type.value + ')\n' +
+        'Current site: ' + (form.current_site.value || 'none') + '\nEmail: ' + email + '\nPhone: ' + form.phone.value +
+        '\nFrustration: ' + (form.frustration.value || '-') + (form.notes.value ? '\nNotes: ' + form.notes.value : '');
+      window.open(wa(msg), '_blank', 'noopener'); done(); return;
+    }
+    btn.disabled = true; btn.textContent = 'Sending…';
+    fetch('https://formspree.io/f/' + C.FORMSPREE_ID, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); done(); })
+      .catch(function () {
+        btn.disabled = false; btn.textContent = 'Send Me My Free Mockup';
+        status.className += ' err';
+        status.innerHTML = 'Something went wrong sending the form. Please try again, or <a href="' + wa('Hi Joey, I\'d like a free homepage mockup.') + '" target="_blank" rel="noopener" style="color:var(--gold-hi)">message us on WhatsApp</a>.';
+      });
+  });
+})();
+</script>
+</body>
+</html>
