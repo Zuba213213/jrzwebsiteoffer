@@ -18,7 +18,7 @@
 <!-- ═══════════ SETTINGS: fill these in, nothing else needs editing ═══════════ -->
 <script>
   window.JRZ = {
-    FORMSPREE_ID: '',      // e.g. 'xyzabcd' from formspree.io → your form's endpoint https://formspree.io/f/xyzabcd
+    FORMSPREE_ID: 'xeaekjlz', // Formspree form "Free Mockup Requests" → https://formspree.io/f/xeaekjlz
     BOOKING_URL: '',       // e.g. 'https://cal.com/jrz/20min' — leave empty to use WhatsApp for booking
     META_PIXEL_ID: '',     // e.g. '123456789012345' from Meta Events Manager
     GA4_ID: '',            // e.g. 'G-XXXXXXXXXX' from Google Analytics
@@ -347,6 +347,10 @@
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { status.className += ' err'; status.textContent = 'Please check your email address.'; form.email.focus(); return; }
     if (form._gotcha.value) return; // bot
     var data = new FormData(form);
+    // Clear subject line + where the lead came from, for the notification email
+    data.append('_subject', 'Mockup request: ' + form.business.value.trim() + ' (' + form.business_type.value + ')');
+    data.append('source', 'Homepage free mockup form');
+    data.append('page', location.href);
     function done() {
       panel.classList.add('sent');
       track('Lead', 'generate_lead', { content_name: 'Free homepage mockup' });
@@ -362,11 +366,18 @@
     }
     btn.disabled = true; btn.textContent = 'Sending…';
     fetch('https://formspree.io/f/' + C.FORMSPREE_ID, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
-      .then(function (r) { if (!r.ok) throw new Error(r.status); done(); })
-      .catch(function () {
+      .then(function (r) {
+        if (r.ok) { done(); return; }
+        return r.json().catch(function () { return {}; }).then(function (j) {
+          var msg = j && j.errors && j.errors.length ? j.errors.map(function (e) { return e.message; }).join(' ') : '';
+          throw new Error(msg || 'send-failed');
+        });
+      })
+      .catch(function (err) {
         btn.disabled = false; btn.textContent = 'Send Me My Free Mockup';
         status.className += ' err';
-        status.innerHTML = 'Something went wrong sending the form. Please try again, or <a href="' + wa('Hi Joey, I\'d like a free homepage mockup.') + '" target="_blank" rel="noopener" style="color:var(--gold-hi)">message us on WhatsApp</a>.';
+        var detail = err && err.message && err.message !== 'send-failed' && err.message !== 'Failed to fetch' ? err.message + ' ' : '';
+        status.innerHTML = detail + 'Your request didn\'t go through. Please try again, or <a href="' + wa('Hi Joey, I\'d like a free homepage mockup.') + '" target="_blank" rel="noopener" style="color:var(--gold-hi)">message us on WhatsApp</a>.';
       });
   });
 })();
