@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>JRZ Consulting Solutions — Marketing con Ingeniería</title>
+<meta name="description" content="Estudio de marketing basado en investigación. La Bóveda de Marketing, sitios web a la medida, anuncios en redes sociales y Google, integración de IA y configuración de CRM con segmentación de audiencia — todo construido desde una sola base."/>
+<meta property="og:title" content="JRZ Consulting Solutions — Marketing con Ingeniería"/>
+<meta property="og:description" content="Investigación, sitios web, anuncios, IA y CRM — construidos desde una sola base para que cada pieza empuje en la misma dirección."/>
+<meta name="theme-color" content="#07070a"/>
+<link rel="alternate" hreflang="en" href="../services.html"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../jrz.css"/>
+</head>
+<body class="loading">
+
+<!-- ═══════════ ATMOSPHERE ═══════════ -->
+<canvas id="stage" aria-hidden="true"></canvas>
+<div class="atmos" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"><span></span></div>
+
+<!-- ═══════════ LOADER ═══════════ -->
+<div class="loader" aria-hidden="true">
+  <div class="loader-mark">JRZ</div>
+  <div class="loader-bar"><i></i></div>
+  <div class="loader-count">000</div>
+</div>
+
+<!-- ═══════════ NAV ═══════════ -->
+<header class="nav">
+  <a class="brand" href="#top" aria-label="JRZ Consulting Solutions — inicio">
+    <span class="brand-mono">JRZ</span>
+    <span class="brand-name">Consulting<br>Solutions</span>
+  </a>
+  <nav class="nav-links" aria-label="Principal">
+    <a href="#services">Servicios</a>
+    <a href="#system">El Sistema</a>
+    <a href="#pricing">Precios</a>
+    <a href="vault.html">La Bóveda</a>
+    <a class="lang" href="../services.html" hreflang="en">EN</a>
+    <a class="pill magnetic" href="https://wa.me/16822037801?text=Hola%20Joey%2C%20me%20gustar%C3%ADa%20hablar%20sobre%20el%20marketing%20de%20mi%20negocio." target="_blank" rel="noopener">Escríbenos o Llama</a>
+  </nav>
+  <button class="menu-btn" data-menu aria-expanded="false" aria-controls="mmenu">Menú</button>
+</header>
+<div class="mobile-menu" id="mmenu">
+  <button class="menu-btn close" data-menu aria-expanded="false">Cerrar</button>
+  <a href="#services"><small>01</small>Servicios</a>
+  <a href="#system"><small>02</small>El Sistema</a>
+  <a href="#pricing"><small>03</small>Precios</a>
+  <a href="vault.html"><small>04</small>La Bóveda</a>
+  <a href="../services.html" hreflang="en"><small>EN</small>English</a>
+  <a href="https://wa.me/16822037801" target="_blank" rel="noopener"><small>→</small>Escríbenos o Llama</a>
+</div>
+
+<div class="hud" aria-hidden="true"><span class="hud-num">01 / 10</span><span class="hud-bar"><i></i></span><span class="hud-label">Inicio</span></div>
+
+<a class="float-cta" href="https://wa.me/16822037801?text=Hola%20Joey%2C%20me%20gustar%C3%ADa%20hablar%20sobre%20el%20marketing%20de%20mi%20negocio." target="_blank" rel="noopener" aria-label="Escribe o llama por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 01-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1121 11.5z"/></svg>
+  <span>Escríbenos</span>
+</a>
+
+<main id="top">
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero" data-shape="hero" data-side="right" data-hud="Inicio">
+  <div class="wrap">
+    <span class="label fade">JRZ Consulting Solutions — Estudio de Marketing</span>
+    <h1 data-split>Marketing <em>con ingeniería.</em></h1>
+    <p class="hero-sub fade" style="--d:.5s">Investigación, sitios web, anuncios, IA y CRM — construidos desde una sola base, para que cada pieza empuje en la misma dirección.</p>
+    <div class="hero-ctas fade" style="--d:.7s">
+      <a class="pill magnetic" href="#services">Ver Servicios
+        <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
+      <a class="pill ghost magnetic" href="https://wa.me/16822037801?text=Hola%20Joey%2C%20me%20gustar%C3%ADa%20hablar%20sobre%20el%20marketing%20de%20mi%20negocio." target="_blank" rel="noopener">Escríbenos o Llama</a>
+    </div>
+  </div>
+  <div class="hero-meta">Investigar <b>/</b> Construir <b>/</b> Activar<br>Desde DFW <b>·</b> Para todo el mundo</div>
+  <div class="scroll-cue" aria-hidden="true"><span>Desliza</span><i></i></div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Investigación</span><span class="fill">—</span><span>Sitios Web</span><span class="fill">—</span><span>Anuncios</span><span class="fill">—</span><span>IA</span><span class="fill">—</span><span>CRM</span><span class="fill">—</span>
+    <span>Investigación</span><span class="fill">—</span><span>Sitios Web</span><span class="fill">—</span><span>Anuncios</span><span class="fill">—</span><span>IA</span><span class="fill">—</span><span>CRM</span><span class="fill">—</span>
+  </div>
+</div>
+
+<!-- ═══════════ MANIFESTO ═══════════ -->
+<section class="manifesto" data-shape="hero" data-side="left" data-hud="El Problema">
+  <div class="wrap" style="display:flex; justify-content:flex-end;">
+    <div>
+      <span class="label fade">El Problema</span>
+      <p class="manifesto-text" style="margin-top:28px;">La mayoría de los negocios no tienen un problema de marketing. Tienen un <em>problema de arquitectura.</em> El sitio web, los anuncios, las automatizaciones y el CRM se compran uno a la vez — a personas distintas — y ninguno se comunica con los demás. Nosotros empezamos con la <em>investigación,</em> y desde ahí construimos cada canal.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SERVICES INDEX ═══════════ -->
+<section class="section" id="services" data-shape="system" data-side="right" data-hud="Servicios">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="label fade">Servicios</span>
+        <h2 data-split>Cinco servicios. <em>Una sola base.</em></h2>
+      </div>
+      <p class="fade">Empieza con la investigación o tráenos para un solo canal. De cualquier forma, todo lo que construimos parte de quién eres y a quién sirves.</p>
+    </div>
+    <ol class="svc-list">
+      <li class="svc-row fade"><a href="#vault" data-cursor="Ver"><span class="svc-num">01</span><span class="svc-name">La Bóveda de Marketing</span><span class="svc-tag">Investigación · Base</span><span class="svc-arrow magnetic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li class="svc-row fade"><a href="#websites" data-cursor="Ver"><span class="svc-num">02</span><span class="svc-name">Sitios Web a la Medida</span><span class="svc-tag">Construcción · Conversión</span><span class="svc-arrow magnetic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li class="svc-row fade"><a href="#ads" data-cursor="Ver"><span class="svc-num">03</span><span class="svc-name">Creación de Anuncios</span><span class="svc-tag">Redes · Google</span><span class="svc-arrow magnetic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li class="svc-row fade"><a href="#ai" data-cursor="Ver"><span class="svc-num">04</span><span class="svc-name">Integración de IA</span><span class="svc-tag">Agentes · Automatización</span><span class="svc-arrow magnetic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li class="svc-row fade"><a href="#crm" data-cursor="Ver"><span class="svc-num">05</span><span class="svc-name">CRM y Segmentación</span><span class="svc-tag">Embudo · Audiencia</span><span class="svc-arrow magnetic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ═══════════ 01 VAULT ═══════════ -->
+<section class="chapter" id="vault" data-shape="vault" data-side="right" data-hud="La Bóveda de Marketing">
+  <div class="wrap chapter-grid">
+    <div class="chapter-copy">
+      <span class="ch-num" aria-hidden="true">01</span>
+      <span class="label fade">Investigación · Base</span>
+      <h2 data-split>La Bóveda de <em>Marketing</em></h2>
+      <p class="ch-lead fade">La investigación sobre la que se construye todo lo demás.</p>
+      <p class="ch-body fade">Antes de gastar un dólar o escribir una palabra, documentamos quién eres, a quién sirves y qué debe lograr cada pieza de comunicación. Cinco documentos a la medida, ordenados como un solo sistema, entregados en un portal privado optimizado para celular en 30 días.</p>
+      <div class="ch-actions fade">
+        <a class="pill magnetic" href="vault.html">Ver la Bóveda Completa</a>
+        <a class="pill ghost magnetic" href="https://wa.me/16822037801?text=Hola%20Joey%2C%20me%20interesa%20la%20B%C3%B3veda%20de%20Marketing." target="_blank" rel="noopener">Empezar mi Bóveda</a>
+      </div>
+    </div>
+    <div class="panel fade" style="--d:.15s">
+      <div class="panel-title">Qué incluye</div>
+      <ul class="inc">
+        <li><span>Documento de Consistencia de Marca<small>Identidad, voz, reglas visuales, lista de revisión</small></span></li>
+        <li><span>Perfil de Cliente Ideal<small>2–3 segmentos · miedos, detonantes, sus propias palabras</small></span></li>
+        <li><span>Marco de Tono y Redacción<small>Una sola voz en todos los canales</small></span></li>
+        <li><span>Secuencias de Email — 8–12 correos<small>Cuatro secuencias, listas para enviar</small></span></li>
+        <li><span>Plan de Crecimiento a 90 Días<small>Fugas de ingreso, los números, el plan</small></span></li>
+      </ul>
+      <div class="price-row">
+        <div><div class="price-label">Inversión</div><div class="price">$2,500</div><div class="price-was">Valor por separado <s>$4,535</s></div></div>
+        <div class="price-label" style="text-align:right">Entrega en<br><span style="color:var(--gold-hi); font-size:13px;">30 días</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 02 WEBSITES ═══════════ -->
+<section class="chapter flip" id="websites" data-shape="web" data-side="left" data-hud="Sitios Web a la Medida">
+  <div class="wrap chapter-grid">
+    <div class="chapter-copy">
+      <span class="ch-num" aria-hidden="true">02</span>
+      <span class="label fade">Construcción · Conversión</span>
+      <h2 data-split>Sitios Web <em>a la Medida</em></h2>
+      <p class="ch-lead fade">No es un folleto. Es un embudo escrito desde tu investigación.</p>
+      <p class="ch-body fade">Un sitio construido sobre la Bóveda no empieza con el diseño — empieza con tu Perfil de Cliente Ideal y tu marco de redacción. Cada sección tiene un trabajo: el gancho capta la atención, el problema crea urgencia, la prueba genera confianza y la llamada a la acción convierte.</p>
+      <div class="ch-actions fade">
+        <a class="pill magnetic" href="https://wa.me/16822037801?text=Hola%20Joey%2C%20me%20interesa%20un%20sitio%20web%20a%20la%20medida." target="_blank" rel="noopener">Cotizar mi Sitio</a>
+      </div>
+      <div class="examples fade">
+        <a class="example" href="https://captureeverycall.co/" target="_blank" rel="noopener" data-cursor="Visitar"><div><b>CaptureEveryCall</b><span>Agente de llamadas con IA · embudo para oficios</span></div><em>En vivo →</em></a>
+        <a class="example" href="https://zuba213213.github.io/Mithu.Surendra/" target="_blank" rel="noopener" data-cursor="Visitar"><div><b>Mithu Surendra</b><span>Coach · conferencista · transformación</span></div><em>Vista previa →</em></a>
+      </div>
+    </div>
+    <div class="panel fade" style="--d:.15s">
+      <div class="panel-title">Qué incluye</div>
+      <ul class="inc">
+        <li><span>Diseño a la medida — sin plantillas<small>Construido sobre tu sistema de marca</small></span></li>
+        <li><span>Textos de conversión desde tu Bóveda<small>Gancho → Problema → Prueba → Solución → Llamada a la acción</small></span></li>
+        <li><span>Rápido y pensado para celular<small>La mayoría de tus visitas llegan desde el teléfono</small></span></li>
+        <li><span>Captura de prospectos conectada a tu CRM<small>Formularios, citas, mensaje con un clic</small></span></li>
+        <li><span>Analítica y seguimiento de conversiones<small>Sabe qué página genera cada prospecto</small></span></li>
+        <li><span>Estructura lista para SEO<small>Encabezados limpios, metadatos y velocidad</small></span></li>
+      </ul>
+      <div class="price-row">
+        <div><div class="price-label">Inversión</div><div class="price">$3,500<small>en adelante</small></div></div>
+        <div class="price-label" style="text-align:right">Según el<br><span style="color:var(--gold-hi); font-size:13px;">tamaño del proyecto</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 03 ADS ═══════════ -->
+<section class="chapter" id="ads" data-shape="ads" data-side="right" data-hud="Creación de Anuncios">
+  <div class="wrap chapter-grid">
+    <div class="chapter-copy">
+      <span class="ch-num" aria-hidden="true">03</span>
+      <span class="label fade">Redes · Google</span>
+      <h2 data-split>Creación de <em>Anuncios</em></h2>
+      <p class="ch-lead fade">Anuncios que suenan a ti — dirigidos a la persona con más probabilidad de comprar.</p>
+      <p class="ch-body fade">La mayoría de los anuncios fracasan antes de publicarse: textos genéricos, segmentación genérica. Los nuestros se escriben con el lenguaje real de tu cliente ideal — sus miedos, sus detonantes y las palabras exactas que usa — y luego se prueban, se miden y se mejoran cada mes.</p>
+      <div class="ch-actions fade">
+        <a class="pill magnetic" href="https://wa.me/16822037801?text=Hola%20Joey%2C%20me%20interesa%20la%20creaci%C3%B3n%20de%20anuncios." target="_blank" rel="noopener">Lanzar mis Anuncios</a>
+      </div>
+    </div>
+    <div class="panel fade" style="--d:.15s">
+      <div class="panel-title">Qué incluye</div>
+      <ul class="inc">
+        <li><span>Campañas en Meta (Facebook e Instagram) y Google<small>Búsqueda, feed e historias</small></span></li>
+        <li><span>Paquetes creativos<small>Imágenes, carruseles y guiones de video corto</small></span></li>
+        <li><span>Variantes de títulos y textos para pruebas<small>Basadas en tu marco de redacción</small></span></li>
+        <li><span>Segmentación desde tu Perfil de Cliente Ideal<small>No suposiciones — compradores documentados</small></span></li>
+        <li><span>Configuración de píxel y conversiones<small>Para saber a dónde va cada dólar</small></span></li>
+        <li><span>Reporte mensual y optimización<small>Qué funcionó y qué sigue</small></span></li>
+      </ul>
+      <div class="price-row">
+        <div><div class="price-label">Inversión</div><div class="price">$750<small>/ mes + inversión en anuncios</small></div></div>
+      </div>
+      <p class="note">La inversión en anuncios se paga directamente a Meta o Google — tú conservas la propiedad total de las cuentas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 04 AI ═══════════ -->
+<section class="chapter flip" id="ai" data-shape="ai" data-side="left" data-hud="Integración de IA">
+  <div class="wrap chapter-grid">
+    <div class="chapter-copy">
+      <span class="ch-num" aria-hidden="true">04</span>
+      <span class="label fade">Agentes · Automatización</span>
+      <h2 data-split>Integración de <em>IA</em></h2>
+      <p class="ch-lead fade">Pon la IA a trabajar donde estás perdiendo tiempo y clientes.</p>
+      <p class="ch-body fade">Desde agentes de IA que contestan cada llamada hasta asistentes que escriben con tu voz, encontramos los cuellos de botella de tu negocio y automatizamos primero los correctos. Nosotros creamos <a href="https://captureeverycall.co/" target="_blank" rel="noopener" style="color:var(--gold-hi)">CaptureEveryCall</a> — usamos esta tecnología todos los días.</p>
+      <div class="ch-actions fade">
+        <a class="pill magnetic" href="https://wa.me/16822037801?text=Hola%20Joey%2C%20me%20interesa%20la%20integraci%C3%B3n%20de%20IA." target="_blank" rel="noopener">Encontrar mis Cuellos de Botella</a>
+      </div>
+    </div>
+    <div class="panel fade" style="--d:.15s">
+      <div class="panel-title">Qué incluye</div>
+      <ul class="inc">
+        <li><span>Agentes de llamadas y recepción con IA<small>Contestan, califican y agendan — 24/7</small></span></li>
+        <li><span>Chat en tu sitio que califica prospectos<small>Te envía directo a los más interesados</small></span></li>
+        <li><span>Automatizaciones de seguimiento<small>Llamada perdida → mensaje · consulta → email</small></span></li>
+        <li><span>Herramientas de IA entrenadas con tu voz<small>Contenido que suena a ti, no a un robot</small></span></li>
+        <li><span>Auditoría de procesos<small>Qué automatizar primero y qué dejar en manos humanas</small></span></li>
+      </ul>
+      <div class="price-row">
+        <div><div class="price-label">Inversión</div><div class="price">$1,500<small>en adelante</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 05 CRM ═══════════ -->
+<section class="chapter" id="crm" data-shape="crm" data-side="right" data-hud="CRM y Segmentación">
+  <div class="wrap chapter-grid">
+    <div class="chapter-copy">
+      <span class="ch-num" aria-hidden="true">05</span>
+      <span class="label fade">Embudo · Audiencia</span>
+      <h2 data-split>CRM y <em>Segmentación</em></h2>
+      <p class="ch-lead fade">Cada contacto en su lugar, recibiendo el mensaje correcto.</p>
+      <p class="ch-body fade">Los prospectos se pierden cuando viven en bandejas de entrada, libretas y en la memoria. Configuramos — o limpiamos — tu CRM y segmentamos tu audiencia con los perfiles de comprador de tu investigación, para que cada seguimiento llegue a la persona correcta en el momento correcto.</p>
+      <div class="ch-actions fade">
+        <a class="pill magnetic" href="https://wa.me/16822037801?text=Hola%20Joey%2C%20me%20interesa%20configurar%20mi%20CRM." target="_blank" rel="noopener">Organizar mi Embudo</a>
+      </div>
+    </div>
+    <div class="panel fade" style="--d:.15s">
+      <div class="panel-title">Qué incluye</div>
+      <ul class="inc">
+        <li><span>Configuración o limpieza de CRM<small>En la plataforma que mejor se adapte a ti</small></span></li>
+        <li><span>Embudo y etapas de venta<small>Cada prospecto y cada etapa, de un vistazo</small></span></li>
+        <li><span>Importación, depuración y etiquetado de contactos<small>Tu lista, por fin útil</small></span></li>
+        <li><span>Segmentos de audiencia desde tu perfil ideal<small>Mensajes para cada tipo de comprador</small></span></li>
+        <li><span>Secuencias de email cargadas y automatizadas<small>Los correos de tu Bóveda, funcionando solos</small></span></li>
+        <li><span>Tablero de reportes<small>Sabe qué funciona sin tener que buscar</small></span></li>
+      </ul>
+      <div class="price-row">
+        <div><div class="price-label">Inversión</div><div class="price">$1,200<small>en adelante</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SYSTEM ═══════════ -->
+<section class="section" id="system" data-shape="system" data-side="left" data-hud="El Sistema">
+  <div class="wrap eco-grid">
+    <div class="panel fade" style="padding:clamp(12px,2vw,24px); background:rgba(7,7,10,.45);">
+      <svg class="eco-svg" viewBox="0 0 600 600" role="img" aria-label="La investigación de la Bóveda al centro, conectada a Sitio Web, Anuncios, IA y CRM">
+        <defs>
+          <radialGradient id="coreGrad" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#f0d6a8"/><stop offset="70%" stop-color="#d3a97c"/><stop offset="100%" stop-color="#ba8659"/></radialGradient>
+          <path id="s1" d="M300 300 L300 90"/><path id="s2" d="M300 300 L510 300"/><path id="s3" d="M300 300 L300 510"/><path id="s4" d="M300 300 L90 300"/>
+        </defs>
+        <g class="spin"><circle class="orbit" cx="300" cy="300" r="210"/><circle class="orbit" cx="300" cy="300" r="140" style="stroke-dasharray:1 9"/></g>
+        <line class="spoke" x1="300" y1="300" x2="300" y2="90"/><line class="spoke" x1="300" y1="300" x2="510" y2="300"/>
+        <line class="spoke" x1="300" y1="300" x2="300" y2="510"/><line class="spoke" x1="300" y1="300" x2="90" y2="300"/>
+        <circle class="pulse" r="3.5"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#s1"/></animateMotion></circle>
+        <circle class="pulse" r="3.5"><animateMotion dur="2.4s" begin=".6s" repeatCount="indefinite"><mpath href="#s2"/></animateMotion></circle>
+        <circle class="pulse" r="3.5"><animateMotion dur="2.4s" begin="1.2s" repeatCount="indefinite"><mpath href="#s3"/></animateMotion></circle>
+        <circle class="pulse" r="3.5"><animateMotion dur="2.4s" begin="1.8s" repeatCount="indefinite"><mpath href="#s4"/></animateMotion></circle>
+        <g class="core"><circle class="c1" cx="300" cy="300" r="78"/><text x="300" y="294">LA</text><text x="300" y="316">BÓVEDA</text></g>
+        <g class="node"><circle cx="300" cy="90" r="56"/><text x="300" y="90">SITIO WEB</text></g>
+        <g class="node"><circle cx="510" cy="300" r="56"/><text x="510" y="300">ANUNCIOS</text></g>
+        <g class="node"><circle cx="300" cy="510" r="56"/><text x="300" y="510">CRM</text></g>
+        <g class="node"><circle cx="90" cy="300" r="56"/><text x="90" y="300">IA</text></g>
+      </svg>
+    </div>
+    <div>
+      <span class="label fade">El Sistema</span>
+      <h2 data-split style="font-size:clamp(36px,5vw,72px); margin:18px 0 22px;">Cada canal, <em>una sola voz.</em></h2>
+      <p class="fade" style="font-size:21px;">Cuando el sitio web, los anuncios, la IA y el CRM se construyen desde la misma investigación, dejan de competir entre sí y empiezan a multiplicarse.</p>
+      <ul class="eco-list fade">
+        <li><b>Bóveda</b><span>Define quién eres y exactamente a quién le hablas.</span></li>
+        <li><b>Sitio Web</b><span>Convierte esa claridad en una página que vende.</span></li>
+        <li><b>Anuncios</b><span>Atraen a las personas correctas — en su propio idioma.</span></li>
+        <li><b>CRM</b><span>Ordena cada prospecto en el segmento y la etapa correctos.</span></li>
+        <li><b>IA</b><span>Da seguimiento al instante, a toda hora, con tu voz.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PROCESS ═══════════ -->
+<section class="section" id="process" data-shape="galaxy" data-side="right" data-hud="Proceso">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="label fade">Cómo Funciona</span>
+        <h2 data-split>De la conversación <em>al crecimiento.</em></h2>
+      </div>
+      <p class="fade">Sin presentaciones de venta ni contratos largos para empezar. Un camino claro, paso a paso. <a href="how-we-work.html" style="color:var(--gold-hi)">Ver cómo trabajamos →</a></p>
+    </div>
+    <div class="process">
+      <div class="step" style="--d:0s"><span class="step-n">01</span><h3>Conversación</h3><p>Una llamada por WhatsApp sobre tu negocio — sin ventas, sin presión.</p></div>
+      <div class="step" style="--d:.15s"><span class="step-n">02</span><h3>Investigación</h3><p>La sesión de la Bóveda: tu marca, tus compradores, tus números.</p></div>
+      <div class="step" style="--d:.3s"><span class="step-n">03</span><h3>Construcción</h3><p>Sitio web, anuncios, IA y CRM — construidos desde la investigación.</p></div>
+      <div class="step" style="--d:.45s"><span class="step-n">04</span><h3>Lanzamiento</h3><p>Todo sale en vivo, conectado y medido.</p></div>
+      <div class="step" style="--d:.6s"><span class="step-n">05</span><h3>Crecimiento</h3><p>Medimos, ajustamos y hacemos crecer lo que funciona.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PRICING ═══════════ -->
+<section class="section" id="pricing" data-shape="vault" data-side="center" data-hud="Precios">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="label fade">Inversión</span>
+        <h2 data-split>Precios claros. <em>Sin letra chica.</em></h2>
+      </div>
+      <p class="fade">Empieza con la base y agrega lo que necesites. El alcance final se confirma juntos antes de empezar.</p>
+    </div>
+    <div class="price-grid">
+      <div class="panel pcard feature wide fade">
+        <span class="badge">Empieza aquí</span>
+        <span class="tag">01 · Investigación</span>
+        <h3>La Bóveda de Marketing</h3>
+        <p>Cinco documentos a la medida — marca, cliente ideal, marco de redacción, correos listos y un plan de 90 días — entregados en 30 días.</p>
+        <div class="price">$2,500</div>
+        <div class="price-was">Valor por separado <s>$4,535</s></div>
+        <a class="pill magnetic" href="https://wa.me/16822037801?text=Hola%20Joey%2C%20me%20interesa%20la%20B%C3%B3veda%20de%20Marketing." target="_blank" rel="noopener">Reservar mi Bóveda</a>
+      </div>
+      <div class="panel pcard wide fade" style="--d:.1s">
+        <span class="tag">02 · Construcción</span>
+        <h3>Sitio Web a la Medida</h3>
+        <p>Un embudo de conversión escrito desde tu investigación — diseño a la medida, pensado para celular, conectado a tu CRM y analítica.</p>
+        <div class="price">$3,500<small>en adelante</small></div>
+        <a class="pill ghost magnetic" href="https://wa.me/16822037801?text=Hola%20Joey%2C%20me%20interesa%20un%20sitio%20web%20a%20la%20medida." target="_blank" rel="noopener">Cotizar mi Sitio</a>
+      </div>
+      <div class="panel pcard fade" style="--d:.15s">
+        <span class="tag">03 · Redes y Google</span>
+        <h3>Creación de Anuncios</h3>
+        <p>Creativos, textos, segmentación, seguimiento y optimización mensual.</p>
+        <div class="price">$750<small>/ mes + inversión</small></div>
+        <a class="pill ghost magnetic" href="https://wa.me/16822037801?text=Hola%20Joey%2C%20me%20interesa%20la%20creaci%C3%B3n%20de%20anuncios." target="_blank" rel="noopener">Lanzar Anuncios</a>
+      </div>
+      <div class="panel pcard fade" style="--d:.2s">
+        <span class="tag">04 · Automatización</span>
+        <h3>Integración de IA</h3>
+        <p>Agentes de llamadas, chat que califica prospectos, automatizaciones de seguimiento y herramientas de IA entrenadas con tu voz.</p>
+        <div class="price">$1,500<small>en adelante</small></div>
+        <a class="pill ghost magnetic" href="https://wa.me/16822037801?text=Hola%20Joey%2C%20me%20interesa%20la%20integraci%C3%B3n%20de%20IA." target="_blank" rel="noopener">Agregar IA</a>
+      </div>
+      <div class="panel pcard fade" style="--d:.25s">
+        <span class="tag">05 · Embudo</span>
+        <h3>CRM y Segmentación</h3>
+        <p>Configuración o limpieza, embudos, segmentos según tu cliente ideal y secuencias automatizadas.</p>
+        <div class="price">$1,200<small>en adelante</small></div>
+        <a class="pill ghost magnetic" href="https://wa.me/16822037801?text=Hola%20Joey%2C%20me%20interesa%20configurar%20mi%20CRM." target="_blank" rel="noopener">Organizar CRM</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FINAL CTA ═══════════ -->
+<section class="final" id="contact" data-shape="galaxy" data-side="center" data-hud="Siguiente Paso">
+  <div class="wrap">
+    <span class="label fade">Siguiente Paso</span>
+    <h2 data-split>Construyamos el <em>panorama completo.</em></h2>
+    <p class="fade">Todo empieza con una conversación por WhatsApp. Revisamos dónde está tu negocio y te decimos con honestidad qué conviene construir primero.</p>
+    <a class="pill magnetic fade" href="https://wa.me/16822037801?text=Hola%20Joey%2C%20me%20gustar%C3%ADa%20hablar%20sobre%20el%20marketing%20de%20mi%20negocio." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 01-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1121 11.5z"/></svg>
+      Escríbenos o Llama por WhatsApp</a>
+    <span class="phone fade">+1 (682) 203-7801</span>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 JRZ Consulting Solutions</span>
+    <div class="foot-links">
+      <a href="vault.html">La Bóveda</a>
+      <a href="how-we-work.html">Cómo Trabajamos</a>
+      <a href="../services.html" hreflang="en">English</a>
+      <a href="https://wa.me/16822037801" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../jrz.js"></script>
+</body>
+</html>
